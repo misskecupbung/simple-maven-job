@@ -2,16 +2,20 @@ package com.mycompany.app;
 
 /**
  * Hello world!
- *
  */
-public final class App {
-    /** main entry to hello world.
-     *
-     * @param args command line arguments
-     */
-    public static void main(final String[] args) {
-        System.out.println("Hello World!");
+public class App
+{
+
+    private final String message = "Hello World!";
+
+    public App() {}
+
+    public static void main(String[] args) {
+        System.out.println(new App().getMessage());
     }
-    /** Intentionally private constructor. */
-    private App() { }
+
+    private final String getMessage() {
+        return message;
+    }
+
 }
